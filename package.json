@@ -1,0 +1,33 @@
+{
+  "name": "localrecorde",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare:ffmpeg": "node scripts/prepare-ffmpeg-core.mjs",
+    "dev": "npm run prepare:ffmpeg && next dev",
+    "build": "npm run prepare:ffmpeg && next build",
+    "start": "npm run prepare:ffmpeg && next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@google-cloud/storage": "^7.19.0",
+    "jose": "5.6.3",
+    "nanoid": "5.0.7",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.5.3",
+    "vitest": "^4.1.8"
+  }
+}
